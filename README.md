@@ -11,7 +11,7 @@
 
 ex: {
     "nome": "Bruno",
-    "email": "grunbruno@gmail.com",
+    "email": "bruno@gmail.com",
     "dataNascimento": "2021-09-14",
     "miniCurriculo": "Bruno é um excelente autor de livros de terror"
 }
