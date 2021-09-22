@@ -6,21 +6,24 @@
 {dominio}/autores  
 {dominio}/livros
 
-#exemplo de AutorDTO para POST  
-{
+**Para inserir um livro é necessário:  
+- inserir um autor primeiro    
+
+ex: {
     "nome": "Bruno",
-    "email": "bruno@gmail.com",
+    "email": "grunbruno@gmail.com",
     "dataNascimento": "2021-09-14",
     "miniCurriculo": "Bruno é um excelente autor de livros de terror"
 }
 
-#exemplo de LivroDTO para POST  
+- inserir um livro com um dos id's retornados no serviço GET de autores  
+ex:
 
 {
     "titulo": "O Morro dos Ventos Uivantes",
     "dataLancamento": "2021-09-01",
     "numeroDePaginas": 100,
     "autor": {
-        "id": 80186965
+        "id": XXXXXX
     }
 }
