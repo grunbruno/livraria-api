@@ -21,9 +21,6 @@
     "dataLancamento": "2021-09-01",
     "numeroDePaginas": 100,
     "autor": {
-        "nome": " Emily Bronte",
-        "email": "emilly@gmail.com",
-        "dataNascimento": "1985-09-14",
-        "miniCurriculo": "Emily é um excelente autor de livros de terror"
+        "id": 80186965
     }
 }
