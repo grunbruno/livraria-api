@@ -1,12 +1,12 @@
-#GET
-{dominio}/autores
+#GET  
+{dominio}/autores  
 {dominio}/livros
 
-#POST
-{dominio}/autores
+#POST  
+{dominio}/autores  
 {dominio}/livros
 
-#exemplo de AutorDTO para POST
+#exemplo de AutorDTO para POST  
 {
     "nome": "Bruno",
     "email": "grunbruno@gmail.com",
@@ -14,7 +14,7 @@
     "miniCurriculo": "Bruno é um excelente autor de livros de terror"
 }
 
-#exemplo de LivroDTO para POST
+#exemplo de LivroDTO para POST  
 
 {
     "titulo": "O Morro dos Ventos Uivantes",
