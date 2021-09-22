@@ -1,4 +1,4 @@
-package br.com.alura.dto;
+package br.com.alura.livrariaapi.dto;
 import java.time.LocalDate;
 
 import javax.validation.constraints.NotEmpty;

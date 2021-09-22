@@ -7,8 +7,8 @@ import java.util.stream.Collectors;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
-import br.com.alura.dto.AutorDTO;
-import br.com.alura.dto.AutorFormDTO;
+import br.com.alura.livrariaapi.dto.AutorDTO;
+import br.com.alura.livrariaapi.dto.AutorFormDTO;
 import br.com.alura.livrariaapi.model.Autor;
 
 @Service

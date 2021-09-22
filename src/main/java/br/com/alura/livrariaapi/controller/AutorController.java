@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.alura.dto.AutorDTO;
-import br.com.alura.dto.AutorFormDTO;
+import br.com.alura.livrariaapi.dto.AutorDTO;
+import br.com.alura.livrariaapi.dto.AutorFormDTO;
 import br.com.alura.livrariaapi.service.AutorService;
 
 @RestController

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.alura.dto.LivroDTO;
+import br.com.alura.livrariaapi.dto.LivroDTO;
 import br.com.alura.livrariaapi.service.LivroService;
 
 @RestController

@@ -1,4 +1,4 @@
-package br.com.alura.dto;
+package br.com.alura.livrariaapi.dto;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
