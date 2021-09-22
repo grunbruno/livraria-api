@@ -14,7 +14,7 @@
     "miniCurriculo": "Bruno é um excelente autor de livros de terror"
 }
 
-# exemplo de LivroDTO para POST
+#exemplo de LivroDTO para POST
 
 {
     "titulo": "O Morro dos Ventos Uivantes",
