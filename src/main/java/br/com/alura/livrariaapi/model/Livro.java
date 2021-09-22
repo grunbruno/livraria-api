@@ -2,6 +2,9 @@ package br.com.alura.livrariaapi.model;
 
 import java.time.LocalDate;
 
+import javax.validation.constraints.PastOrPresent;
+import javax.validation.constraints.Size;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,10 +15,10 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class Autor {
-	private String nome;
-	private String email;
-	private LocalDate dataNascimento;
-	private String miniCurriculo;
+public class Livro {
 	
+	private String titulo;
+	private LocalDate dataLancamento;
+	private int numeroDePaginas;
+	private Autor autor;
 }

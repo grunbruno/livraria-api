@@ -1,34 +1,26 @@
 package br.com.alura.dto;
 import java.time.LocalDate;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter @Setter
 public class AutorDTO {
-
+	
+	@NotNull
+	@NotEmpty
 	private String nome;
+	
+	@NotNull
+	@NotEmpty
 	private String email;
+	
+	@NotNull
+	@Past
 	private LocalDate dataNascimento;
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public LocalDate getDataNascimento() {
-		return dataNascimento;
-	}
-
-	public void setDataNascimento(LocalDate dataNascimento) {
-		this.dataNascimento = dataNascimento;
-	}
 
 }

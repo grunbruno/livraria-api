@@ -11,25 +11,24 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.alura.dto.AutorDTO;
-import br.com.alura.dto.AutorFormDTO;
-import br.com.alura.livrariaapi.service.AutorService;
+import br.com.alura.dto.LivroDTO;
+import br.com.alura.livrariaapi.service.LivroService;
 
 @RestController
-@RequestMapping("/autores")
-public class AutorController {
+@RequestMapping("/livros")
+public class LivroController {
 	
 	@Autowired
-	AutorService autorService;
+	LivroService livroService;
 	
 	@GetMapping
-	public List<AutorDTO> listar() {
-		return autorService.listar();
+	public List<LivroDTO> listar(){
+		return livroService.listar();
 	}
 	
 	@PostMapping
-	public void cadastrar(@RequestBody @Valid AutorFormDTO autor) {
-		autorService.cadastrar(autor);
+	public void cadastrar(@RequestBody @Valid LivroDTO livroDTO) {
+		System.out.println(livroDTO);
+		livroService.cadastrar(livroDTO);
 	}
-	
 }
