@@ -11,16 +11,9 @@ import lombok.Setter;
 @Getter @Setter
 public class AutorDTO {
 	
-	@NotNull
-	@NotEmpty
+	private int id;
 	private String nome;
-	
-	@NotNull
-	@NotEmpty
 	private String email;
-	
-	@NotNull
-	@Past
 	private LocalDate dataNascimento;
 
 }

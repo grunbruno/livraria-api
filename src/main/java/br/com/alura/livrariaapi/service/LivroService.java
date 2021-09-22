@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.alura.livrariaapi.dto.LivroDTO;
+import br.com.alura.livrariaapi.dto.LivroFormDTO;
+import br.com.alura.livrariaapi.model.Autor;
 import br.com.alura.livrariaapi.model.Livro;
 
 @Service
@@ -18,7 +20,7 @@ public class LivroService {
 	private ModelMapper modelMapper = new ModelMapper();
 	
 	@Autowired
-	private AutorService autorService;
+	AutorService autorService;
 	
 	public List<LivroDTO> listar(){
 		return livros
@@ -28,9 +30,11 @@ public class LivroService {
 	}
 	
 	
-	public void cadastrar(LivroDTO livroDTO) {
+	public void cadastrar(LivroFormDTO livroFormDTO) {
 		
-		autorService.cadastrar(livroDTO.getAutor());
-		livros.add(modelMapper.map(livroDTO, Livro.class));
+		Autor autor = autorService.getAutor(livroFormDTO.getAutor().getId());
+		Livro livro = modelMapper.map(livroFormDTO, Livro.class);		
+		livro.setAutor(autor);
+		livros.add(livro);
 	}
 }

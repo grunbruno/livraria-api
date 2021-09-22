@@ -13,6 +13,8 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Autor {
+	
+	private int id;
 	private String nome;
 	private String email;
 	private LocalDate dataNascimento;

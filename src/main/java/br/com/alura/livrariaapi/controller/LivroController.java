@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.alura.livrariaapi.dto.LivroDTO;
+import br.com.alura.livrariaapi.dto.LivroFormDTO;
 import br.com.alura.livrariaapi.service.LivroService;
 
 @RestController
@@ -27,8 +28,7 @@ public class LivroController {
 	}
 	
 	@PostMapping
-	public void cadastrar(@RequestBody @Valid LivroDTO livroDTO) {
-		System.out.println(livroDTO);
+	public void cadastrar(@RequestBody @Valid LivroFormDTO livroDTO) {
 		livroService.cadastrar(livroDTO);
 	}
 }

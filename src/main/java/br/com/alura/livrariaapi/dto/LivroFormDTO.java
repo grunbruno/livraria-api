@@ -12,11 +12,16 @@ import lombok.ToString;
 
 @Getter @Setter
 @ToString
-public class LivroDTO {
+public class LivroFormDTO {
 	
+	@Size(min = 10)
 	private String titulo;
-	private LocalDate dataLancamento;
-	private int numeroDePaginas;
-	private AutorFormDTO autor;
 	
+	@PastOrPresent
+	private LocalDate dataLancamento;
+	
+	@Min(value = 100)
+	private int numeroDePaginas;
+	
+	private AutorLivroFormDTO autor;
 }
