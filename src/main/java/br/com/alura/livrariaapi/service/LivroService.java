@@ -30,11 +30,13 @@ public class LivroService {
 	}
 	
 	
-	public void cadastrar(LivroFormDTO livroFormDTO) {
+	public LivroDTO cadastrar(LivroFormDTO livroFormDTO) {
 		
 		Autor autor = autorService.getAutor(livroFormDTO.getAutor().getId());
 		Livro livro = modelMapper.map(livroFormDTO, Livro.class);		
 		livro.setAutor(autor);
 		livroRepository.save(livro);
+		
+		return modelMapper.map(livro, LivroDTO.class);
 	}
 }

@@ -11,7 +11,7 @@ import lombok.Setter;
 @Getter @Setter
 public class AutorDTO {
 	
-	private int id;
+	private Long id;
 	private String nome;
 	private String email;
 	private LocalDate dataNascimento;
