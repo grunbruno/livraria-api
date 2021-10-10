@@ -5,5 +5,5 @@ import lombok.Setter;
 
 @Getter @Setter
 public class AutorLivroFormDTO {
-	private int id;
+	private Long id;
 }
