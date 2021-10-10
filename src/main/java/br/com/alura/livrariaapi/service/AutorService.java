@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import br.com.alura.livrariaapi.dto.AutorDTO;
 import br.com.alura.livrariaapi.dto.AutorFormDTO;
@@ -29,7 +30,7 @@ public class AutorService {
 				.map( a -> modelMapper.map(a, AutorDTO.class));
 	}
 	
-	
+	@Transactional
 	public AutorDTO cadastrar(AutorFormDTO autorDTO) {
 		Autor autor = modelMapper.map(autorDTO, Autor.class);
 		autorRepository.save(autor);
@@ -38,13 +39,12 @@ public class AutorService {
 	}
 
 
-	public Autor getAutor(Long idAutor) {
+	public void validateAutor(Long idAutor) {
 		System.out.println("Validando autor de ID: " + idAutor);
 		Optional<Autor> findById = autorRepository.findById(idAutor);
 
 		if(!findById.isPresent())
 			throw new RuntimeException("Autor ainda não cadastrado!");
 		
-		return findById.get();
 	}
 }
