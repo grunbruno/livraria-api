@@ -5,6 +5,8 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,8 +25,8 @@ public class AutorController {
 	AutorService autorService;
 	
 	@GetMapping
-	public List<AutorDTO> listar() {
-		return autorService.listar();
+	public Page<AutorDTO> listar(Pageable pageable) {
+		return autorService.listar(pageable);
 	}
 	
 	@PostMapping
